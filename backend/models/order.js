@@ -25,14 +25,4 @@ const OrderSchema = new Schema(
   { timestamps: true },
 )
 
-// OrderSchema.pre(/^find/, function (next) {
-//   this.populate([
-//     {
-//       path: 'cart_item.product',
-//       select: 'name ',
-//     },
-//   ])
-//   next()
-// })
-
 module.exports = models.Order || model('Order', OrderSchema)
